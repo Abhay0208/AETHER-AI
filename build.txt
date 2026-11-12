@@ -1,0 +1,740 @@
+OFFICIAL PROJECT IDENTITY:
+
+The project name is AETHER (AETHER AI).
+
+Use AETHER consistently throughout the entire application,
+source code documentation, terminal interface, package metadata,
+GitHub README, installer, API documentation and UI.
+
+Create a simple, recognizable AETHER logo.
+Do not use another product's branding or copy its identity.
+
+Official tagline:
+"One Platform. Limitless Intelligence."
+
+The product must feel like an independent open-source ecosystem,
+not a clone of ChatGPT, OpenCode or OpenRouter.
+
+MASTER PROJECT PROMPT — BUILD AN OPEN-SOURCE ALL-IN-ONE AI PLATFORM
+
+Act as a world-class software architect, senior full-stack developer, AI infrastructure engineer, security engineer, and UI/UX designer.
+
+Build a complete, production-ready, open-source, self-hosted AI platform that combines the capabilities of ChatGPT, OpenCode, AI coding agents, AI image generators, AI video generators, professional video editors, unified AI API gateways, and an extensible skills ecosystem.
+
+This must be a real application with functional features, not a prototype, mockup, or static dashboard.
+
+1. PROJECT VISION
+
+Create a universal AI workspace where users can:
+
+- Chat with 80+ AI models.
+- Generate images and videos.
+- Write, edit, and manage files.
+- Build applications and websites.
+- Run autonomous AI agents.
+- Install and execute community skills.
+- Edit videos automatically using AI.
+- Access 100+ external data sources and integrations.
+- Connect multiple API providers and API keys.
+- Generate one unified API key for accessing their connected models.
+- Run everything locally through a terminal on Windows, Linux, macOS, and Android (Termux where supported).
+
+The platform must be open source, modular, extensible, and self-hostable.
+
+2. SIMPLE UI DESIGN
+
+Do NOT create an unnecessarily futuristic or complicated interface.
+
+Design a simple, clean, lightweight, professional UI.
+
+Requirements:
+
+- Clean sidebar navigation.
+- Simple chat interface.
+- Minimal animations.
+- Light and dark themes.
+- Responsive desktop and mobile layouts.
+- File explorer.
+- Model selector.
+- API key manager.
+- Skills marketplace.
+- Image and video workspace.
+- Settings dashboard.
+- Live task and generation status.
+- Clear error messages.
+
+Avoid excessive gradients, glowing effects, huge cards, and unnecessary animations.
+
+The application should feel like a combination of OpenCode and ChatGPT, with its own identity.
+
+3. AI MODEL ECOSYSTEM — 80+ MODELS
+
+Build an extensible provider architecture supporting 80+ models across multiple providers.
+
+Support integrations such as:
+
+- OpenAI
+- Anthropic
+- Google Gemini
+- DeepSeek
+- xAI
+- Mistral
+- Meta Llama
+- Qwen
+- Cohere
+- Groq
+- Cerebras
+- OpenRouter
+- OmniRoute
+- FreeLLMAPI
+- Together AI
+- Fireworks AI
+- Hugging Face
+- Ollama
+- LM Studio
+- vLLM
+- Other OpenAI-compatible APIs.
+
+Requirements:
+
+- Automatically discover available models when supported.
+- Manually register custom model endpoints.
+- Model search and filtering.
+- Model capability detection.
+- Streaming responses.
+- Tool calling.
+- Vision support.
+- Context window information.
+- Provider-specific configuration.
+- Model fallback and retry.
+- Model usage tracking.
+
+Never assume every model supports every feature.
+
+4. UNIVERSAL API KEY GATEWAY
+
+Build a unified API gateway inspired by OpenRouter, OmniRoute, and FreeLLMAPI.
+
+Users should be able to add multiple API keys from different providers.
+
+Features:
+
+- Add multiple keys per provider.
+- Add unlimited providers where technically supported.
+- Encrypt API keys at rest.
+- Test API keys.
+- Enable/disable individual keys.
+- Rotate keys.
+- Track usage.
+- Track rate limits.
+- Track provider errors.
+- Automatic key rotation.
+- Provider selection.
+- Load balancing.
+- Intelligent fallback.
+- Per-model routing.
+- Cost tracking when pricing data is available.
+
+Generate a unified API key for the user's local installation.
+
+Example:
+
+"sk-local-xxxxxxxxxxxxxxxx"
+
+The user should be able to use this single key with supported applications through an OpenAI-compatible API endpoint.
+
+Example:
+
+"http://localhost:5467/v1/chat/completions"
+
+Support:
+
+- Chat completions.
+- Streaming.
+- Model listing.
+- Image generation routes where supported.
+- Video generation routes where supported.
+- Tool calls where supported.
+
+Maintain compatibility with OpenCode and other compatible AI clients wherever possible.
+
+Do not expose original provider API keys to client applications.
+
+5. AI FILE WORKSPACE
+
+Create a complete AI-powered file workspace.
+
+Users should be able to:
+
+- Create files.
+- Read files.
+- Edit files.
+- Delete files.
+- Rename files.
+- Create folders.
+- Upload files.
+- Download files.
+- Preview files.
+- Search file contents.
+- Generate files using AI.
+- Edit existing files through AI.
+- Compare file versions.
+- Restore previous versions.
+
+Support formats including:
+
+TXT, MD, PDF, DOCX, XLSX, CSV, JSON, XML, HTML, CSS, JS, TS, JSX, TSX, PY, JAVA, KOTLIN, C, CPP, GO, RUST, YAML, TOML and more.
+
+Provide a proper code editor with syntax highlighting, autocomplete where supported, and file navigation.
+
+AI agents must be able to work with project files through controlled tools and permissions.
+
+6. AI IMAGE GENERATION
+
+Build a universal image generation system.
+
+Support multiple image providers and models.
+
+Features:
+
+- Text-to-image.
+- Image-to-image.
+- Image editing.
+- Background removal.
+- Image upscaling.
+- Inpainting.
+- Outpainting.
+- Multiple image generation.
+- Aspect ratio selection.
+- Resolution selection.
+- Style controls.
+- Negative prompts where supported.
+- Reference image support.
+- Generation history.
+- Save images locally.
+
+Support different image formats and provider capabilities.
+
+Do not artificially limit image generation to one model or provider.
+
+7. AI VIDEO GENERATION — FLEXIBLE DURATION
+
+Build a multi-provider AI video generation engine.
+
+Support:
+
+- Text-to-video.
+- Image-to-video.
+- Video-to-video where supported.
+- Video extension.
+- Video continuation.
+- Scene generation.
+- Character consistency where supported.
+- Multiple aspect ratios.
+- Resolution selection.
+- Audio generation where supported.
+- Subtitles.
+- Voiceovers.
+- Multiple video providers.
+
+Allow users to request any duration, including:
+
+10 seconds, 30 seconds, 1 minute, 5 minutes, 10 minutes, 30 minutes, 60 minutes, and longer.
+
+IMPORTANT:
+
+Do not pretend that every provider can generate a 60-minute video in one request.
+
+Implement an intelligent scene-based generation engine:
+
+1. Understand the user's video idea.
+2. Generate a complete script.
+3. Divide the script into scenes.
+4. Estimate scene durations.
+5. Generate individual clips using available providers.
+6. Continue or extend clips when supported.
+7. Generate narration and audio when available.
+8. Assemble all clips.
+9. Apply transitions.
+10. Synchronize audio.
+11. Render the final video.
+12. Export the result.
+
+Users should be able to generate long videos by combining multiple clips.
+
+Support background rendering, job queues, resumable tasks, and progress tracking.
+
+8. AUTOMATIC AI VIDEO EDITOR
+
+Build a functional AI-powered video editor.
+
+Features:
+
+- Automatic video editing.
+- Automatic scene detection.
+- Automatic transitions.
+- Automatic cuts.
+- Beat synchronization.
+- Music synchronization.
+- Automatic subtitles.
+- Voiceover generation.
+- Background music.
+- Audio cleanup.
+- Noise reduction.
+- Smart cropping.
+- Video resizing.
+- Color correction.
+- Basic color grading.
+- Speed adjustment.
+- Slow motion.
+- Text overlays.
+- Animated captions.
+- Intro and outro generation.
+- Multiple tracks.
+- Timeline editing.
+- Undo and redo.
+- Export presets.
+
+Provide both:
+
+1. Automatic editing mode.
+2. Manual editing mode.
+
+Use FFmpeg for media processing and appropriate open-source libraries for timeline, transcription, and rendering.
+
+Do not make the editor a fake interface. Editing operations must actually modify the media.
+
+9. 200+ AI SKILLS ECOSYSTEM
+
+Build a skills system inspired by OpenCode and modern AI agent frameworks.
+
+Target 200+ installable skills.
+
+Create categories:
+
+- Software Development
+- Web Development
+- Android Development
+- Python Development
+- Cybersecurity
+- Research
+- Writing
+- Education
+- Mathematics
+- Data Analysis
+- Image Generation
+- Video Generation
+- Video Editing
+- Automation
+- DevOps
+- Minecraft Development
+- Database Management
+- API Development
+- Productivity
+- Business
+
+Requirements:
+
+- Skill marketplace.
+- Search skills.
+- Install skills.
+- Uninstall skills.
+- Enable/disable skills.
+- Update skills.
+- Import local skills.
+- GitHub skill repository support.
+- Custom skill creation.
+- Skill versioning.
+- Skill dependency management.
+- Skill permissions.
+- Skill documentation.
+- Skill execution logs.
+
+Allow users to create their own skills and share them with the community.
+
+Use a documented skill manifest format.
+
+Do not invent 200 functional skills using placeholder descriptions. Build a working core collection and an extensible community marketplace.
+
+10. 100+ DATA SOURCES AND INTEGRATIONS
+
+Create a universal integration ecosystem.
+
+Include supported free/public APIs and integrations from categories such as:
+
+SPACE AND SCIENCE:
+
+- NASA APIs
+- Astronomy Picture of the Day
+- Spaceflight News
+- Open astronomy datasets
+- Public scientific datasets
+
+NEWS AND INFORMATION:
+
+- NewsAPI where available
+- GDELT
+- RSS feeds
+- Guardian API where access is available
+- Other public news sources
+
+MEDIA AND ENTERTAINMENT:
+
+- YouTube Data API
+- TMDB
+- TVMaze
+- MusicBrainz
+- Spotify API where authorized
+- Public entertainment metadata
+- Netflix-related public metadata where legitimately available
+
+DEVELOPMENT:
+
+- GitHub API
+- GitLab API
+- Stack Exchange API
+- npm registry
+- PyPI
+- Docker Hub
+- Public package registries
+
+KNOWLEDGE:
+
+- Wikipedia
+- Wikidata
+- OpenAlex
+- arXiv
+- Crossref
+- Open Library
+
+OTHER:
+
+- Weather APIs
+- Currency APIs
+- Maps APIs
+- Translation services
+- Public government datasets
+- Public financial datasets
+- Public educational datasets.
+
+Target 100+ integrations through a modular connector system.
+
+Each connector should have:
+
+- Name.
+- Description.
+- Documentation.
+- Authentication requirements.
+- Free/paid status.
+- Rate limits.
+- Available operations.
+- Connection testing.
+- Error handling.
+
+Do not bypass paid subscriptions, DRM, authentication, or access restrictions. For Netflix, support legitimate metadata and authorized integrations, not unauthorized streaming access.
+
+11. AUTONOMOUS AI AGENTS
+
+Create a multi-agent architecture.
+
+Agents should be able to:
+
+- Research topics.
+- Write reports.
+- Generate documents.
+- Create applications.
+- Modify code.
+- Analyze files.
+- Generate images.
+- Generate videos.
+- Execute workflows.
+- Use installed skills.
+- Access approved integrations.
+- Work on multiple tasks.
+
+Implement:
+
+- Planning.
+- Task decomposition.
+- Tool selection.
+- Execution.
+- Memory.
+- Context management.
+- Error recovery.
+- Human approval.
+- Task history.
+- Background execution.
+
+Users must be able to monitor and stop running tasks.
+
+12. TERMINAL INSTALLATION AND LOCAL SERVER
+
+The platform must be runnable from a terminal.
+
+Target operating systems:
+
+- Windows 10/11.
+- Linux.
+- macOS.
+- Android through Termux where dependencies permit.
+
+Provide a simple installation experience.
+
+Example:
+
+"git clone https://github.com/USERNAME/PROJECT.git"
+
+"cd PROJECT"
+
+"./install.sh"
+
+"./start.sh"
+
+For Windows, provide equivalent PowerShell scripts.
+
+Once started, the application should open at:
+
+"http://localhost:5467"
+
+Requirements:
+
+- Automatic dependency checks.
+- Automatic database initialization.
+- Configuration setup.
+- Environment variable management.
+- Local storage.
+- Port configuration.
+- Graceful shutdown.
+- Automatic recovery from recoverable failures.
+- Useful terminal logs.
+- Installation troubleshooting.
+
+Android/Termux support must be tested independently. Do not assume desktop dependencies work on Android.
+
+13. SECURITY AND PRIVACY
+
+Implement security from the beginning.
+
+- Encrypted API key storage.
+- Local-first architecture.
+- Authentication and session management.
+- CSRF protection where applicable.
+- Rate limiting.
+- Input validation.
+- Secure file handling.
+- Path traversal prevention.
+- Command execution sandboxing.
+- Skill permission system.
+- Connector permission system.
+- Audit logs.
+- Configurable data retention.
+- Safe secret management.
+- Secure local API authentication.
+
+AI agents must never receive unrestricted access to the operating system by default.
+
+Require explicit user approval for dangerous commands, external uploads, destructive file operations, and sensitive actions.
+
+14. TECHNICAL ARCHITECTURE
+
+Choose a maintainable, modular technology stack.
+
+Suggested architecture:
+
+Frontend:
+
+- React.
+- TypeScript.
+- Vite.
+- Tailwind CSS.
+- Lightweight component system.
+
+Backend:
+
+- Python FastAPI or Node.js.
+- Modular provider adapters.
+- REST APIs.
+- WebSockets or Server-Sent Events.
+
+Storage:
+
+- SQLite as the default local database.
+- Optional PostgreSQL.
+- Local filesystem for generated files and media.
+
+Media:
+
+- FFmpeg.
+- Background worker system.
+- Resumable generation jobs.
+
+AI:
+
+- Provider abstraction layer.
+- Unified model registry.
+- Agent orchestration.
+- Skills runtime.
+- Tool execution framework.
+
+Choose technologies based on actual cross-platform compatibility, not popularity alone.
+
+15. GITHUB REPOSITORY STRUCTURE
+
+Create a professional open-source repository.
+
+Suggested structure:
+
+project/
+frontend/
+backend/
+core/
+providers/
+gateway/
+agents/
+skills/
+connectors/
+image_engine/
+video_engine/
+video_editor/
+file_workspace/
+database/
+security/
+workers/
+scripts/
+tests/
+docs/
+examples/
+.github/
+README.md
+CONTRIBUTING.md
+SECURITY.md
+LICENSE
+CHANGELOG.md
+install.sh
+start.sh
+install.ps1
+start.ps1
+docker-compose.yml
+.env.example
+
+Adapt this structure where necessary, but maintain clear separation of responsibilities.
+
+16. DEVELOPMENT RULES
+
+These requirements are mandatory:
+
+1. Do not create a static mockup.
+2. Do not use fake API responses in production functionality.
+3. Do not add buttons that do nothing.
+4. Do not hardcode API keys.
+5. Do not claim unsupported provider capabilities.
+6. Do not duplicate functionality unnecessarily.
+7. Do not break existing working features when upgrading.
+8. Write modular and maintainable code.
+9. Handle errors properly.
+10. Add automated tests.
+11. Document every major subsystem.
+12. Keep the UI lightweight.
+13. Make the application usable on low-resource hardware where possible.
+14. Ensure background jobs survive temporary UI disconnections.
+15. Respect each provider's terms, usage limits, and guardrails.
+
+17. IMPLEMENTATION ROADMAP
+
+Build in phases.
+
+PHASE 1:
+Core architecture, terminal installation, local server, database, basic UI, file workspace.
+
+PHASE 2:
+AI provider integrations, model selector, multi-key manager, unified API gateway.
+
+PHASE 3:
+Agent framework, skills runtime, skill installation, initial skill collection.
+
+PHASE 4:
+Image generation, provider adapters, image history and management.
+
+PHASE 5:
+Video generation, scene planner, clip assembly, FFmpeg processing.
+
+PHASE 6:
+Automatic video editor, timeline, transitions, subtitles, audio and export.
+
+PHASE 7:
+100+ connector ecosystem, marketplace, permissions and documentation.
+
+PHASE 8:
+Security audit, automated testing, performance optimization, cross-platform testing and stable release.
+
+18. FINAL EXPECTATION
+
+The final result must be a genuinely usable open-source AI ecosystem.
+
+Users should be able to install it, open localhost:5467, connect their API providers, select models, create files, generate images, produce videos, install skills, access data sources, and run AI agents.
+
+Everything must work through real integrations.
+
+Build the foundation properly before expanding the feature count.
+
+Do not stop after creating the UI.
+
+Start by analyzing the environment, selecting the best compatible architecture, creating the complete project structure, and implementing Phase 1.
+
+After each phase:
+
+- Run tests.
+- Fix errors.
+- Update documentation.
+- Verify functionality.
+- Report completed features and remaining work.
+
+Never mark an unfinished feature as completed.
+
+MISSION: Build a universal, open-source, local-first AI operating workspace that brings AI models, agents, files, media generation, editing, skills, integrations, and unified APIs into one simple application.
+
+INSTALLATION AND DISTRIBUTION SYSTEM — MANDATORY
+
+Build a complete cross-platform installation and onboarding system for AETHER AI.
+
+Users must not need to manually install or configure every dependency.
+
+Create:
+
+1. install.sh for Linux.
+2. install.ps1 for Windows.
+3. macOS installation support.
+4. install-termux.sh for Android.
+5. start.sh and start.ps1.
+6. Docker Compose installation.
+7. Prebuilt GitHub release packages.
+8. Automatic update and rollback mechanism.
+9. Dependency detection and installation.
+10. Automatic database initialization.
+11. First-launch setup wizard.
+12. Secure API key configuration.
+13. Automatic local server startup.
+14. Automatic browser opening at http://localhost:5467.
+15. Uninstaller that allows users to preserve or delete their data.
+
+The installer must detect operating system, CPU architecture, available RAM, storage, and missing dependencies.
+
+Use prebuilt binaries where practical. Avoid requiring users to compile large dependencies themselves.
+
+Android Termux must have a separately tested installation path. Clearly identify features that are unsupported on Android.
+
+Provide three installation modes:
+
+- Easy Install: Recommended for normal users.
+- Developer Install: Git clone and development dependencies.
+- Docker Install: Container-based setup.
+
+The first-launch wizard must allow users to connect providers, add multiple API keys, choose models, install skills, configure storage, and manage permissions.
+
+AETHER must work offline for its local UI and local-file features, while online AI providers and external connectors require internet access.
+
+Never ship API keys or credentials inside installers or repository files.
+
+Installation must be repeatable, safe, resumable, and provide clear error messages.
+
+Build an automatic AETHER Skills Downloader. On first launch, automatically discover, download, validate, and install 100+ real, useful AI skills from trusted public GitHub repositories and legitimate online skill marketplaces. Organize them into categories such as coding, research, cybersecurity, image generation, video editing, automation, writing, and productivity. Automatically resolve dependencies, check compatibility, detect duplicates, verify source integrity, and maintain skill versions. Provide an installation progress screen, error logs, update and uninstall options. Scan every skill for malicious code and excessive permissions before installation. Never execute untrusted skills automatically. Require user approval for dangerous permissions. Do not generate fake skills or placeholder entries. Make the entire system extensible so users can discover and install additional community skills.

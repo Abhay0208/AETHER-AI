@@ -1,0 +1,15 @@
+# AETHER backend requirements.
+#
+# The server is a stdlib-only ThreadingHTTPServer (asyncio + sqlite3) so it
+# runs on any Python 3.10+ with no mandatory packages.
+#
+# httpx is REQUIRED for Phase 2+ provider adapters, which make real HTTP calls
+# to OpenAI, Anthropic, Google Gemini, Ollama, Groq, Together, etc.
+httpx>=0.27.0
+
+# Optional provider/runtime dependencies (install if wheels exist for your
+# platform; the backend falls back to pure-Python implementations otherwise):
+# cryptography>=42.0.0   # AES encryption of API keys at rest (XOR fallback)
+# passlib[bcrypt]>=1.7.4 # password hashing (PBKDF2 fallback)
+# itsdangerous>=2.2.0    # signed access tokens (HMAC fallback)
+# aiohttp>=3.10.0        # alternate async provider client

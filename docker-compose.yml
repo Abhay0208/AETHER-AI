@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  aether:
+    build: .
+    container_name: aether
+    ports:
+      - "5467:5467"
+    environment:
+      - AETHER_PORT=5467
+      - AETHER_HOST=0.0.0.0
+      - AETHER_DEBUG=false
+      - AETHER_SECRET_KEY=${AETHER_SECRET_KEY:-}
+      - AETHER_ENCRYPTION_KEY=${AETHER_ENCRYPTION_KEY:-}
+      - AETHER_DATA_DIR=/data
+    volumes:
+      - aether_data:/data
+    restart: unless-stopped
+    command: >
+      sh -c "python -m uvicorn app.main:app --host 0.0.0.0 --port 5467"
+
+volumes:
+  aether_data:

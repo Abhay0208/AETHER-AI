@@ -1,0 +1,37 @@
+AETHER server starting on http://127.0.0.1:5467
+UI:      http://127.0.0.1:5467/
+API:     http://127.0.0.1:5467/v1  and  /auth, /files, /models, /providers
+Docs:    http://127.0.0.1:5467/docs (redirects to /)
+[aether] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET /assets/index-BkfdYSK5.js HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET /assets/index-DeCZv48Q.css HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "POST /api/auth/login HTTP/1.1" 200 -
+/data/data/com.termux/files/home/aether/backend/app/main.py:730: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  exp = datetime.datetime.utcnow() + datetime.timedelta(days=30)
+[aether] 127.0.0.1 - "GET /api/auth/me HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "POST /api/auth/logout HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET /api/auth/me HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET /api/auth/me HTTP/1.1" 401 -
+[aether] 127.0.0.1 - "POST /api/auth/login HTTP/1.1" 401 -
+[aether] 127.0.0.1 - "POST /api/files HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET /api/files/text?path=smoke.txt HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET /api/files HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET /api/files/search?q=smoke HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "POST /api/files/rename HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "DELETE /api/files HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET /does-not-exist HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET /api/nope HTTP/1.1" 404 -
+[aether] 127.0.0.1 - "GET /api/providers HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "POST /api/models/register HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "GET /api/v1/models HTTP/1.1" 200 -
+[aether] 127.0.0.1 - "POST /api/v1/chat/completions HTTP/1.1" 403 -
+[aether] 127.0.0.1 - "GET /api/skills HTTP/1.1" 501 -
+[aether] 127.0.0.1 - "GET /api/agents HTTP/1.1" 501 -
+[aether] 127.0.0.1 - "GET /api/integrations HTTP/1.1" 501 -
+[aether] 127.0.0.1 - "GET /api/images HTTP/1.1" 501 -
+[aether] 127.0.0.1 - "GET /api/video HTTP/1.1" 501 -
+[aether] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
